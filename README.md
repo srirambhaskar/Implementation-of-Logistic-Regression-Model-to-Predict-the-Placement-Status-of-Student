@@ -8,29 +8,25 @@ To write a program to implement the the Logistic Regression Model to Predict the
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
-
-1.Import the required packages and print the present data.
-
-2.Print the placement data and salary data.
-
-3.Find the null and duplicate values.
-
-4.Using logistic regression find the predicted values of accuracy , confusion matrices.
-
-5.Display the results. 
-
+1. Import the required packages and print the present data
+2. Print the placement data and salary data.
+3. Find the null and duplicate values.
+4. Using logistic regression find the predicted values of accuracy , confusion matrices.
 
 ## Program:
+
+
+
 ```python
+
 /*
 Program to implement the the Logistic Regression Model to Predict the Placement Status of Student.
-Developed by: GAUTHAM KRISHNA S
-RegisterNumber:  212223240036
+Developed by: HIRUTHIK SUDHAKAR
+RegisterNumber: 212223240054
 */
-```
-```python
+
 import pandas as pd
-data=pd.read_csv("Placement_Data.csv")
+data=pd.read_csv("C:/Users/admin/Downloads/Midhun/Placement_Data.csv")
 data.head()
 
 data1=data.copy()
@@ -50,11 +46,12 @@ data1["hsc_s"]=le.fit_transform(data1["hsc_s"])
 data1["degree_t"]=le.fit_transform(data1["degree_t"])
 data1["workex"]=le.fit_transform(data1["workex"])
 data1["specialisation"]=le.fit_transform(data1["specialisation"] )     
-data1["status"]=le.fit_transform(data1["status"])       
+data1["status"]=le.fit_transform(data1["status"])
 data1 
 
 x=data1.iloc[:,:-1]
 x
+
 y=data1["status"]
 y
 
@@ -78,64 +75,59 @@ confusion
 from sklearn.metrics import classification_report
 classification_report1 = classification_report(y_test,y_pred)
 print(classification_report1)
+
 lr.predict([[1,80,1,90,1,1,90,1,0,85,1,85]])
+
 ```
 
 ## Output:
+
+
+
 ### TOP 5 ELEMENTS
-![image](https://github.com/gauthamkrishna7/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/141175025/0a5cda11-f165-4e1b-86ec-5f16a2f1ee09)
 
-![image](https://github.com/gauthamkrishna7/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/141175025/01a8cd00-a0ac-49e9-bdc5-116dc5c20f3d)
+![image](https://github.com/HIRU-VIRU/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/145972122/04b0fcce-c444-42d7-b055-a7e6ac77678d)
 
-![image](https://github.com/gauthamkrishna7/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/141175025/877b2b6f-3436-47e1-9833-e0f9ad9aa560)
+![image](https://github.com/HIRU-VIRU/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/145972122/e9963d89-9a92-4575-b01e-677a85537cf1)
 
-### Data Duplicate:
-![image](https://github.com/gauthamkrishna7/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/141175025/9f5231e0-796f-4f94-a0bf-d38784643278)
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-### Print Data:
-![image](https://github.com/gauthamkrishna7/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/141175025/8ff146fd-7c1b-4323-8bba-b9fedaee4ab1)
-
-### Data-Status:
-![image](https://github.com/gauthamkrishna7/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/141175025/8e99861d-c573-4987-9024-596a68482332)
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+![image](https://github.com/HIRU-VIRU/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/145972122/e21f9740-4b51-489a-a471-f59892e74f69)
 
 
 
-### y_prediction array:
-![image](https://github.com/gauthamkrishna7/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/141175025/a0cf6d5c-79d4-485e-84ea-e6601f115379)
+### DATA DUPLICATE
+
+![image](https://github.com/HIRU-VIRU/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/145972122/210eead6-4770-4e23-b794-b1a5f9428e0d)
 
 
+### PRINT DATA
 
-### Confusion array:
-![image](https://github.com/gauthamkrishna7/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/141175025/58525a0d-f694-4ddf-ac84-5b596381c5ef)
-
-
-### Accuracy Value:
-![image](https://github.com/gauthamkrishna7/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/141175025/4f64023f-c3c2-45d2-afca-b68b780f5279)
+![image](https://github.com/HIRU-VIRU/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/145972122/2ad5eecf-18b0-47ba-84e0-9fc00443541e)
 
 
-### Classification Report:
-![image](https://github.com/gauthamkrishna7/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/141175025/9a18c485-4dcb-4116-b6d5-f8fdab5de668)
+### DATA_STATUS
 
-### Prediction of LR:
-![image](https://github.com/gauthamkrishna7/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/141175025/e0aeefa2-a16d-40cd-b5ab-b1b1a22044f1)
+![image](https://github.com/HIRU-VIRU/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/145972122/3a6e8cae-f77d-414e-b674-020cd6f87fae)
+
+
+### Y_PREDICTION ARRAY
+
+![image](https://github.com/HIRU-VIRU/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/145972122/ff5c9ca0-aa45-4b9f-a727-8ff5bb079ba9)
+
+
+### CONFUSION ARRAY
+![image](https://github.com/HIRU-VIRU/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/145972122/1e6c4ab6-c90b-4278-be39-1f7721487b21)
+
+### ACCURACY VALUE
+
+![image](https://github.com/HIRU-VIRU/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/145972122/e70452c6-a4ee-4428-be43-bfd1d677f5fa)
+
+### CLASSFICATION REPORT
+
+![image](https://github.com/HIRU-VIRU/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/145972122/70144eaf-0396-4780-ac47-a34e16f85ad8)
+
+### PREDICTION
+![image](https://github.com/HIRU-VIRU/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/145972122/791654fd-4387-4d63-a415-cbaa1564a6a1)
+
 
 
 ## Result:
